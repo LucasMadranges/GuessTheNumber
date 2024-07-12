@@ -35,6 +35,7 @@ while gameStart do
             separateLine()
             io.write("Le jeu n'attend pas !\n")
             local numChoice
+            local nbrCoup = 0
 
             while numChoice ~= random do
                 io.write("Choisis un nombre : ")
@@ -44,16 +45,19 @@ while gameStart do
                     io.write("Le nombre à trouvé ne peut pas être supérieur au nombre aléatoire...\n")
                 elseif random > numChoice then
                     io.write("C'est + !\n")
+                    nbrCoup = nbrCoup + 1
                 elseif random < numChoice then
                     io.write("C'est - !\n")
+                    nbrCoup = nbrCoup + 1
                 elseif random == numChoice then
                     io.write("C'est gagné !\n")
                 end
             end
 
             io.write("Bravo ! Le nombre à trouver été ", random, "\n")
+            io.write("Vous avez trouvé le nombre en ", nbrCoup, " coups !\n")
             io.read()
-            io.write("Veux-tu rejouer ? ")
+            io.write("Veux-tu rejouer (yes/no) ? ")
             local choiceThree = io.read()
 
             if choiceThree == "no" then
