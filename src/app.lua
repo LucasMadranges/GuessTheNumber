@@ -28,7 +28,7 @@ while gameStart do
         separateLine()
         io.write("Le nombre sera compris entre 0 et ", maxValue, "\n")
         local random = randomNumber(maxValue)
-        io.write("Que le jeu commence ! Est-tu prêt (yes/no) ? ")
+        io.write("Que le jeu commence ! Es-tu prêt (yes/no) ? ")
         local choiceTwo = io.read()
 
         if choiceTwo == "yes" or choiceTwo == "no" then
